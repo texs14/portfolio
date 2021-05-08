@@ -1,0 +1,31 @@
+@import "../../styles/vars.scss";
+
+.main {
+  width: calc(100% - 200px);
+  height: 100vh;
+
+  overflow-x: hidden;
+
+  scrollbar-color: #f2f2f2 #4892FF; // скролл для fire fox
+
+  &__title {
+    padding: 90px;
+    text-align: center;
+  }
+}
+// сколл для остальных браузеров
+
+::-webkit-scrollbar-track {
+  background: #4892FF;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  border-radius: 150px;
+  border-left: 4px solid #4892FF;
+  border-right: 3px solid #4892FF;
+}
