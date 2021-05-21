@@ -1,6 +1,10 @@
 @import "../../styles/vars.scss";
 
 .main {
+
+  position: relative;
+  background: $bgOfMainFirst;
+
   width: calc(100% - 200px);
   height: 100vh;
 
@@ -8,7 +12,13 @@
 
   scrollbar-color: #f2f2f2 #4892FF; // скролл для fire fox
 
+  &__wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+
   &__title {
+    @include fontTitle($titleSize);
     padding: 90px;
     text-align: center;
   }

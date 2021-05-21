@@ -1,0 +1,54 @@
+@import "../../styles/vars.scss";
+
+.description {
+  padding: 60px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  }
+
+  &__title {
+    @include fontTitle($titleSize);
+    margin-left: 30px;
+  }
+
+  &__paragraph {
+    font-size: 24px;
+    font-weight: 500;
+
+    width: 80%;
+    margin: 30px auto 0;
+    text-align: center;
+  }
+
+}
+
+.skills {
+  display: flex;
+  flex-flow: column;
+
+
+  padding: 60px 0;
+  background: $bgOfMainSecond;
+
+  &__title {
+    @include fontTitle($titleSize);
+    text-align: center;
+  }
+
+  &__image {
+    display: block;
+    width: 80%;
+    margin: 30px auto 0;
+  }
+
+
+}

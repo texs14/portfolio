@@ -1,0 +1,35 @@
+@import '../../styles/vars.scss';
+
+
+.footer {
+  padding: 60px 0;
+
+  .wrapper-for-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__contact {
+    font-size: 24px;;
+
+    &:first-child {
+      margin-left: 10px;
+    }
+
+    &:not(:first-child) {
+      font-weight: 500;
+      margin-top: 10px;
+    }
+  }
+
+  &__ps {
+    width: 50%;
+    margin-left: 60px;
+    box-sizing: border-box;
+
+    color: #8D8D8D;
+    opacity: .9;
+  }
+}

@@ -1,9 +1,10 @@
-@import "vars.scss";
+@import "fonts.scss";
 @import "reset.scss";
+
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, Oswald,'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,4 +29,9 @@ header {
 
 main {
   order: 1;
+}
+
+.wrapper-for-bg {
+  max-width: 1440px;
+  margin: auto;
 }

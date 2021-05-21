@@ -1,34 +1,38 @@
-import React, {useRef, useEffect} from 'react';
-import {Route, Switch} from "react-router-dom";
+import React, {useEffect, useRef} from 'react';
+import {Route, Switch, useHistory} from "react-router-dom";
 import './main.scss';
 
 import Project from "../Project/Project";
-import About from "./About";
+import ProjectsList from "../ProjectsList/ProjectsList";
+import AboutMe from "../AboutMe/AboutMe";
 
 
 
 function Main() {
+
+    const history = useHistory();
+
     const main = useRef(null);
 
-    useEffect(()=> {
-        main.current.style.overflowY = main.current.scrollHeight > window.innerHeight ? 'scroll' : null;
-    });
+    useEffect(() => {
+        history.listen(() => {
+            main.current.scrollTop = 0;
+        });
+    })
 
     return (
-        <main ref={main} className={"main"} >
-            <Switch>
-                <Route exact path={'/'}>
-                    <h1>Home</h1>
-                    <h1  className={"main__title"} >Title</h1>
-                    <h1  className={"main__title"} >Title</h1>
-                </Route>
-                <Route exact path={'/about'}>
-                    <About />
-                </Route>
-                <Route path={`/about/:projectPath`}>
-                    <Project />
-                </Route>
-            </Switch>
+        <main className={"main"} ref={main}>
+                <Switch>
+                    <Route exact path={'/'}>
+                        <AboutMe/>
+                    </Route>
+                    <Route exact path={'/about'}>
+                        <ProjectsList />
+                    </Route>
+                    <Route path={`/about/:projectPath`}>
+                        <Project />
+                    </Route>
+                </Switch>
         </main>
     )
 }

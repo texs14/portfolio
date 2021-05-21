@@ -5,37 +5,89 @@ const initialState = {
         {
             name: 'Another site',
             path: 'another-project',
-            description: 'сайт хуё маё',
-            images: [
-                'https://s.poembook.ru/theme/e4/ce/3e/acd5e666cb88d555bafccf3c0cd04ae0cd17f290.jpeg'
-            ],
+            description: {
+                paragraphFirst: 'First paragraph',
+                paragraphSecond: 'Second paragraph',
+                paragraphThird: 'Third paragraph',
+                paragraphFourth: 'Fourth paragraph',
+            },
+            preview: 'https://sun9-4.userapi.com/impg/lcYySOnmzSzgKcAK1PzaDni13MJ6L_wJQ7Dt_A/R0fjv94yFMk.jpg?size=890x179&quality=96&sign=a683ffd9c2b3342b0a95cca891ed03ab&type=album',
+            images: {
+                desktop: [
+                    'https://sun9-46.userapi.com/impg/OiwLdSxEhbKJVnsHDX9UMU--SnpVfODbuv8SKg/eJnDEkbPlSg.jpg?size=1280x740&quality=96&sign=8d7d17646bcefe9e5ae4a49a7515c7bc&type=album',
+                'https://sun9-52.userapi.com/impg/F7C0PVFDmvazlje9oEDfCt_LjeqYcWoswHVEGg/_vVImOadxo8.jpg?size=1280x740&quality=96&sign=bb1e2e20b55740fedb01cc3fac0193d9&type=album',
+                'https://sun9-49.userapi.com/impg/XypOs5_p9gkSoA0zptZYFlmx3p7qub-lP2mrGA/wxlmyX-vH30.jpg?size=1280x740&quality=96&sign=553f3d102cf24987e2f8799552635b3d&type=album'
+                ],
+                mobile: [
+                    'https://sun9-1.userapi.com/impg/3M90Ccx_VWn-VhRMx80lFJ9jQMkuTyXJDGcxrQ/UJjWpbYHCAY.jpg?size=1280x832&quality=96&sign=973d0fe798ea3298073d00816e68040d&type=album'
+                ]
+            },
 
         },
         {
             name: 'Another site2',
             path: 'another-project2',
-            description: 'сайт хуё маё',
-            images: [
-                'https://avatars.mds.yandex.net/get-zen_doc/251164/pub_5c93853642c5cc00b3ccea6e_5c9388c0a328fe00af70f332/scale_1200'
-            ],
+            description: {
+                paragraphFirst: 'First paragraph',
+                paragraphSecond: 'Second paragraph',
+                paragraphThird: 'Third paragraph',
+                paragraphFourth: 'Fourth paragraph',
+            },
+            preview: 'https://sun9-4.userapi.com/impg/lcYySOnmzSzgKcAK1PzaDni13MJ6L_wJQ7Dt_A/R0fjv94yFMk.jpg?size=890x179&quality=96&sign=a683ffd9c2b3342b0a95cca891ed03ab&type=album',
+            images: {
+                desktop: [
+                    'https://sun9-2.userapi.com/impg/x23mBhVYlBHfajGnDe0_OCbvU4FYdNh9-XqjyA/hPcWwjkxoSY.jpg?size=375x812&quality=96&sign=57cddb77de0249778cdd9606c02d2fbd&type=album',
+                    'https://sun9-10.userapi.com/impg/65MfyJOBPca5sHH93C7Zhc3arKTKjz9j30rIQg/2u-J2NISP3U.jpg?size=375x812&quality=96&sign=0e234b0479181225bcf8292af3d03e45&type=album',
+                    'https://sun9-45.userapi.com/impg/l8kuJzaqJvGDi0Npu8l7piuvgCx9Qrumc5RQJA/eUeF-5i6Lqw.jpg?size=375x812&quality=96&sign=28b79b1eea79cef53d0c6983f62aa76a&type=album'
+                ],
+                mobile: [
+                    'https://sun9-1.userapi.com/impg/3M90Ccx_VWn-VhRMx80lFJ9jQMkuTyXJDGcxrQ/UJjWpbYHCAY.jpg?size=1280x832&quality=96&sign=973d0fe798ea3298073d00816e68040d&type=album'
+                ]
+            },
 
         },
         {
             name: 'Another site22',
             path: 'another-project22',
-            description: 'сайт хуё маё',
-            images: [
-                'https://faunistics.com/wp-content/uploads/2020/01/11-4.jpg'
-            ],
+            description: {
+                paragraphFirst: 'First paragraph',
+                paragraphSecond: 'Second paragraph',
+                paragraphThird: 'Third paragraph',
+                paragraphFourth: 'Fourth paragraph',
+            },
+            preview: 'https://sun9-4.userapi.com/impg/lcYySOnmzSzgKcAK1PzaDni13MJ6L_wJQ7Dt_A/R0fjv94yFMk.jpg?size=890x179&quality=96&sign=a683ffd9c2b3342b0a95cca891ed03ab&type=album',
+            images: {
+                desktop: [
+                    'https://sun9-2.userapi.com/impg/x23mBhVYlBHfajGnDe0_OCbvU4FYdNh9-XqjyA/hPcWwjkxoSY.jpg?size=375x812&quality=96&sign=57cddb77de0249778cdd9606c02d2fbd&type=album',
+                    'https://sun9-10.userapi.com/impg/65MfyJOBPca5sHH93C7Zhc3arKTKjz9j30rIQg/2u-J2NISP3U.jpg?size=375x812&quality=96&sign=0e234b0479181225bcf8292af3d03e45&type=album',
+                    'https://sun9-45.userapi.com/impg/l8kuJzaqJvGDi0Npu8l7piuvgCx9Qrumc5RQJA/eUeF-5i6Lqw.jpg?size=375x812&quality=96&sign=28b79b1eea79cef53d0c6983f62aa76a&type=album'
+                ],
+                mobile: [
+                    'https://sun9-1.userapi.com/impg/3M90Ccx_VWn-VhRMx80lFJ9jQMkuTyXJDGcxrQ/UJjWpbYHCAY.jpg?size=1280x832&quality=96&sign=973d0fe798ea3298073d00816e68040d&type=album'
+                ]
+            },
 
         },
         {
             name: 'Another site222',
             path: 'another-project222',
-            description: 'сайт хуё маё',
-            images: [
-                'http://andrey-eltsov.ru/wp-content/uploads/2021/01/yhe382994bh_sh-wago-gh_a7239kkkw_3-6mjh_j-amerikanskaja-kunica-na-sn.jpg'
-            ],
+            description: {
+                paragraphFirst: 'First paragraph',
+                paragraphSecond: 'Second paragraph',
+                paragraphThird: 'Third paragraph',
+                paragraphFourth: 'Fourth paragraph',
+            },
+            preview: 'https://sun9-4.userapi.com/impg/lcYySOnmzSzgKcAK1PzaDni13MJ6L_wJQ7Dt_A/R0fjv94yFMk.jpg?size=890x179&quality=96&sign=a683ffd9c2b3342b0a95cca891ed03ab&type=album',
+            images: {
+                desktop: [
+                    'https://sun9-2.userapi.com/impg/x23mBhVYlBHfajGnDe0_OCbvU4FYdNh9-XqjyA/hPcWwjkxoSY.jpg?size=375x812&quality=96&sign=57cddb77de0249778cdd9606c02d2fbd&type=album',
+                    'https://sun9-10.userapi.com/impg/65MfyJOBPca5sHH93C7Zhc3arKTKjz9j30rIQg/2u-J2NISP3U.jpg?size=375x812&quality=96&sign=0e234b0479181225bcf8292af3d03e45&type=album',
+                    'https://sun9-45.userapi.com/impg/l8kuJzaqJvGDi0Npu8l7piuvgCx9Qrumc5RQJA/eUeF-5i6Lqw.jpg?size=375x812&quality=96&sign=28b79b1eea79cef53d0c6983f62aa76a&type=album'
+                ],
+                mobile: [
+                    'https://sun9-1.userapi.com/impg/3M90Ccx_VWn-VhRMx80lFJ9jQMkuTyXJDGcxrQ/UJjWpbYHCAY.jpg?size=1280x832&quality=96&sign=973d0fe798ea3298073d00816e68040d&type=album'
+                ]
+            },
 
         }
     ],
@@ -47,28 +99,9 @@ const initialState = {
                 path: "/"
             },
             {
-                title: 'About',
-                    path: "/about",
-                    projects:
-                        [
-                            {
-                                title: 'another project',
-                                path: '/another-project'
-                            },
-                            {
-                                title: 'another project2',
-                                path: '/another-project2'
-                            },
-                            {
-                                title: 'another project22',
-                                path: '/another-project22'
-                            },
-                            {
-                                title: 'another project222',
-                                path: '/another-project222'
-                            }
-                        ]
-            }
+                title: 'Projects',
+                    path: "/about"
+            },
         ]
     },
 };

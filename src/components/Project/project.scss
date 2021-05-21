@@ -1,0 +1,29 @@
+@import "../../styles/vars.scss";
+
+.project {
+
+  width: 80%;
+  margin: auto;
+
+  &__title {
+    margin: auto;
+    @include fontTitle($titleSize);
+  }
+
+  &__link {
+    height: fit-content;
+    @include linkFont($linkSize, $linkColor);
+
+    &_disable {
+      cursor: default;
+      color: $linkColorDisable;
+    }
+  }
+
+  &__top-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+}

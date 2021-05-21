@@ -1,13 +1,10 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import { useSelector} from "react-redux";
-import onScroll from '../../functions/onScroll';
 import { useParams, Link} from "react-router-dom";
-import '../Main/main.scss';
+import './project.scss';
 
 
 function Project() {
-
-    const main = useRef(null);
 
     const projects = useSelector(state => state.projects);
 
@@ -27,15 +24,19 @@ function Project() {
 
 
     return (
-        <>
+        <section className={'project wrapper-for-bg'}>
 
-            {marker !== 0 && <Link to={`/about/${arrPath[marker - 1]}`} >Туда</Link>}
-            {marker !== arrPath.length - 1 && <Link to={`/about/${arrPath[marker + 1]}`} >Сюда</Link>}
+            <div className="project__top-wrapper">
+                {marker !== 0 ? <Link className={'project__link'} to={`/about/${arrPath[marker - 1]}`} >Туда</Link> : ''}
 
-            <h2>{projectPath}</h2>
-            <img src={project.images[0]} alt=""/>
+                <h2 className={'project__title'}>{projectPath}</h2>
 
-        </>
+                {marker !== arrPath.length - 1 ? <Link to={`/about/${arrPath[marker + 1]}`} className={'project__link '}>Сюда</Link>  : ''}
+            </div>
+            <img src={project.images.desktop[0]} alt=""/>
+            <p>{project.description.paragraphFirst}</p>
+
+        </section>
     )
 }
 

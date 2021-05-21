@@ -11,6 +11,7 @@ function Header() {
     let youAreHere = useSelector(state => state.menu.youAreHere);
     let history = useHistory();
     const menuElements = useSelector(state => state.menu.elements);
+    const menuProjectsElements = useSelector(state => state.projects);
     const dispatch = useDispatch();
 
 
@@ -19,10 +20,11 @@ function Header() {
             dispatch(whereYou(history.location.pathname));
         });
 
-    }, [youAreHere]);
+
+    }, []);
     return (
 
-        <header>
+        <header className={"header"}>
             <nav className={"nav-menu"}>
                 <ul className={"nav-menu__list"}>
                     {menuElements.map((element, i) => {
@@ -30,21 +32,21 @@ function Header() {
                             <li className={"nav-menu__item"} key={i}>
                                     <Link
                                         to={element.path}
-                                        style={onActive(history.location.pathname, element.path) ? {backgroundColor: 'red'} : {   }}
+                                        className={onActive(history.location.pathname, element.path) ? 'active' : ''}
                                     >
                                         {element.title}
                                     </Link>
                                         {
-                                            element.projects && history.location.pathname.search(regexLiteralAbout) >= 0 && (
+                                            element.path === '/about' && history.location.pathname.search(regexLiteralAbout) >= 0 && (
                                                 <ul className={"nav-menu__sub-list"}>
-                                                    {element.projects.map((project, i) => {
+                                                    {menuProjectsElements.map((project, i) => {
                                                         return (
                                                             <li className={"nav-menu__sub-item"} key={i}>
                                                                 <Link
-                                                                    to={`/about${project.path}`}
-                                                                    style={onActive(history.location.pathname, project.path) ? {backgroundColor: 'red'} : {   }}
+                                                                    to={`/about/${project.path}`}
+                                                                    className={onActive(history.location.pathname, project.path) ? 'sub-active' : ''}
                                                                 >
-                                                                    {project.title}
+                                                                    {project.name}
                                                                 </Link>
                                                             </li>
                                                         )

@@ -1,0 +1,50 @@
+@import "../../styles/vars.scss";
+
+@keyframes card {
+
+  to{
+    z-index: 4;
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-35%);
+  }
+
+  100% {
+    z-index: 4;
+  }
+}
+
+
+.project-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.fake-block {
+  position: relative;
+  bottom: -60px;
+  height: 60px;
+}
+
+.project-item {
+  display: block;
+  width: 80%;
+
+  margin: auto;
+
+  background: center / 105% no-repeat;
+  //height: fit-content;
+
+  //&:hover {
+  //  animation: card .5s;
+  //  animation-fill-mode: both;
+  //}
+  transition: .5s;
+
+}
