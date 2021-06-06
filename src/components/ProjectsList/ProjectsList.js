@@ -23,17 +23,6 @@ function ProjectsList() {
     let coeff = 0;
     let disable = true;
 
-    const onMouseEnter = (el, i, isLastElement) => {
-        if(isLastElement && disable) return null;
-        el.target.style.transform = `translateY(-${i * percent + percent}%)`;
-    };
-
-    const onMouseLeave = (el, i, isLastElement) => {
-        if(isLastElement && disable) return null;
-        el.target.style.transform = `translateY(-${i * percent}%)`;
-    };
-
-
     console.log(window.innerHeight);
     switch (true) {
 
@@ -54,12 +43,18 @@ function ProjectsList() {
         case window.innerHeight <= 829 && window.innerHeight >= 680 :
             coeff = 0.75
             percent = 34;
-            previewProjectHeight = '150px';
+            previewProjectHeight = '160px';
             break;
 
         case window.innerHeight <= 940 && window.innerHeight >= 830 :
             coeff = 0.75
             percent = 35;
+            previewProjectHeight = '200px';
+            break;
+
+        case window.innerHeight >= 941 :
+            coeff = 0.75
+            percent = 315;
             previewProjectHeight = '200px';
             break;
         default:
@@ -69,6 +64,16 @@ function ProjectsList() {
             disable = true;
 
     }
+
+    const onMouseEnter = (el, i, isLastElement) => {
+        if(isLastElement && disable) return null;
+        el.target.style.transform = `translateY(-${i * percent + percent}%)`;
+    };
+
+    const onMouseLeave = (el, i, isLastElement) => {
+        if(isLastElement && disable) return null;
+        el.target.style.transform = `translateY(-${i * percent}%)`;
+    };
 
 
 

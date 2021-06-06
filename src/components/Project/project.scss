@@ -5,7 +5,44 @@
   width: 80%;
   margin: auto;
 
-  &__title {
+  &__wrapper-text-about-mobile {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    margin-top: 60px;
+  }
+
+  &__wrapper-text {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper-text:nth-child(2n) {
+    .project__image {
+      margin-right: 0;
+      margin-left: 40px;
+      order: 2;
+    }
+
+    .project__paragraph {
+      order: 1;
+    }
+  }
+
+  &__image {
+    width: 45%;
+    height: fit-content;
+    margin-right: 40px;
+  }
+
+  &__paragraph{
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+    &__title {
     margin: auto;
     @include fontTitle($titleSize);
   }
@@ -13,6 +50,11 @@
   &__link {
     height: fit-content;
     @include linkFont($linkSize, $linkColor);
+    outline: none;
+
+    &:hover {
+      color: $linkColorHover;
+    }
 
     &_disable {
       cursor: default;

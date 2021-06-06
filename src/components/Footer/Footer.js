@@ -4,7 +4,7 @@ import './footer.scss';
 
 function Footer() {
     return (
-        <footer className={"footer"}>
+        <div className={"footer"}>
             <div className="wrapper-for-bg">
                 <ul className="footer__list-contacts">
                     <li className="footer__contact">Для связи:</li>
@@ -13,7 +13,7 @@ function Footer() {
                 </ul>
                 <p className="footer__ps">Этот сайт сделан как дополнение к портфолио и не несёт в себе никакого другого смысла</p>
             </div>
-        </footer>
+        </div>
     );
 }
 

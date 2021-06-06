@@ -5,6 +5,7 @@ import './main.scss';
 import Project from "../Project/Project";
 import ProjectsList from "../ProjectsList/ProjectsList";
 import AboutMe from "../AboutMe/AboutMe";
+import Footer from "../Footer/Footer";
 
 
 
@@ -17,6 +18,7 @@ function Main() {
     useEffect(() => {
         history.listen(() => {
             main.current.scrollTop = 0;
+            console.log('check');
         });
     })
 
@@ -33,6 +35,7 @@ function Main() {
                         <Project />
                     </Route>
                 </Switch>
+            <Footer />
         </main>
     )
 }

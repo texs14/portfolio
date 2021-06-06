@@ -2,7 +2,6 @@ import React from 'react';
 import skills from '../../images/skills.png';
 
 import './AboutMe.scss';
-import Footer from "../Footer/Footer";
 
 function AboutMe() {
     return (
@@ -24,7 +23,6 @@ function AboutMe() {
                 <img className={"skills__image"} src={skills} alt="Перечень скилов"/>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }
