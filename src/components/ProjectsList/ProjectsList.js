@@ -54,8 +54,8 @@ function ProjectsList() {
 
         case window.innerHeight >= 941 :
             coeff = 0.75
-            percent = 315;
-            previewProjectHeight = '200px';
+            percent = 36;
+            previewProjectHeight = '300px';
             break;
         default:
             percent = 0;

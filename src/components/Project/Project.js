@@ -1,7 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import { useSelector} from "react-redux";
 import { useParams, Link} from "react-router-dom";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import './project.scss';
+
 
 function Project() {
 
@@ -38,6 +40,18 @@ function Project() {
 
                     {marker !== arrPath.length - 1 ? <Link to={`/about/${arrPath[marker + 1]}`} className={'project__link '}>Сюда</Link>  : ''}
                 </div>
+
+                <Swiper
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    loop
+                >
+                    <SwiperSlide className='slide'>1</SwiperSlide>
+                    <SwiperSlide className='slide'>2</SwiperSlide>
+                    <SwiperSlide className='slide'>3</SwiperSlide>
+                </Swiper>
+
 
                 {
                     description.desctop.map((block, i)=> {
