@@ -3,6 +3,7 @@ import { useSelector} from "react-redux";
 import { useParams, Link} from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './project.scss';
+import 'swiper/swiper.scss';
 
 
 function Project() {
