@@ -3,7 +3,7 @@ import { useSelector} from "react-redux";
 import { useParams, Link} from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './project.scss';
-import 'swiper/swiper.scss';
+import 'swiper/swiper.min.css'
 
 
 function Project() {
@@ -22,7 +22,8 @@ function Project() {
         return project.path === projectPath;
     })[0];
     const description = project.description;
-    console.log(project);
+    const images = project.images;
+    console.log(images);
     console.log(description);
 
         //Отметка где именно в масиве находиться выбранный проект,
@@ -48,32 +49,19 @@ function Project() {
                     navigation
                     loop
                 >
-                    <SwiperSlide className='slide'>1</SwiperSlide>
-                    <SwiperSlide className='slide'>2</SwiperSlide>
-                    <SwiperSlide className='slide'>3</SwiperSlide>
+                    {
+                        images.map((img, key) => (
+                        <SwiperSlide key={key}>
+                            <img className={"project__image"} src={img} alt="скриншот сайта"/>
+                        </SwiperSlide>
+                        ))
+                    }
                 </Swiper>
 
 
-                {
-                    description.desctop.map((block, i)=> {
-                        return (
-                            <div className="project__wrapper-text" key={i}>
-                                <img className={"project__image"} src={block.image} alt="скриншот сайта"/>
-                                <p className={"project__paragraph"}>{block.paragraph}</p>
-                            </div>
-                            )
 
-                    })
-                }
-                {
-                    description.mobile.image && (
-                            <div className="project__wrapper-text-about-mobile" >
-                                <h2>Mobile</h2>
-                                <img className={"project__image"} src={description.mobile.image} alt="скриншот сайта"/>
-                                <p className={"project__paragraph"}>{description.mobile.paragraph}</p>
-                            </div>
-                    )
-                }
+                <p className={"project__paragraph"}>{description}</p>
+
 
 
             </section>
