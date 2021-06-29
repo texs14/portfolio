@@ -7,6 +7,8 @@ import ProjectsList from "../ProjectsList/ProjectsList";
 import AboutMe from "../AboutMe/AboutMe";
 import Footer from "../Footer/Footer";
 
+import {PAGE_CASESE_NAME} from '../../Constants/Сonstants';
+
 
 
 function Main() {
@@ -18,7 +20,6 @@ function Main() {
     useEffect(() => {
         history.listen(() => {
             main.current.scrollTop = 0;
-            console.log('check');
         });
     })
 
@@ -28,10 +29,10 @@ function Main() {
                     <Route exact path={'/'}>
                         <AboutMe/>
                     </Route>
-                    <Route exact path={'/about'}>
+                    <Route exact path={`/${PAGE_CASESE_NAME}`}>
                         <ProjectsList />
                     </Route>
-                    <Route path={`/about/:projectPath`}>
+                    <Route path={`/${PAGE_CASESE_NAME}/:projectPath`}>
                         <Project />
                     </Route>
                 </Switch>

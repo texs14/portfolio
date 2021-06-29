@@ -5,13 +5,7 @@ import onScroll from '../../functions/onScroll';
 
 import {useSelector} from "react-redux";
 import Footer from "../Footer/Footer";
-
-
-
-
-
-
-
+import {PAGE_CASESE_NAME} from '../../Constants/Сonstants';
 
 
 function ProjectsList() {
@@ -23,10 +17,7 @@ function ProjectsList() {
     let coeff = 0;
     let disable = true;
 
-    console.log(window.innerHeight);
     switch (true) {
-
-
         case window.innerHeight < 580 :
             percent = 0;
             coeff = 0;
@@ -57,6 +48,7 @@ function ProjectsList() {
             percent = 36;
             previewProjectHeight = '300px';
             break;
+
         default:
             percent = 0;
             coeff = 0;
@@ -64,6 +56,8 @@ function ProjectsList() {
             disable = true;
 
     }
+
+    // Анимация карточек проектов при наведемии курсора
 
     const onMouseEnter = (el, i, isLastElement) => {
         if(isLastElement && disable) return null;
@@ -74,8 +68,6 @@ function ProjectsList() {
         if(isLastElement && disable) return null;
         el.target.style.transform = `translateY(-${i * percent}%)`;
     };
-
-
 
     return (
         <>
@@ -94,15 +86,12 @@ function ProjectsList() {
                                               transform: `translateY(-${i * percent}%)`,
                                               backgroundImage: `url("${project.preview}")`
                                           }} onMouseEnter={(el) => onMouseEnter(el, i, isLastElement)}
-                                          onMouseLeave={el => onMouseLeave(el, i, isLastElement)} to={`about/${project.path}`} >
+                                          onMouseLeave={el => onMouseLeave(el, i, isLastElement)} to={`${PAGE_CASESE_NAME}/${project.path}`} >
                                           </Link>
                               )
                         })
                     }
                 </div>
-                {/*<Footer/>*/}
-
-
         </>
     )
 }

@@ -3,11 +3,11 @@ import {Link, NavLink, useHistory, useRouteMatch} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
 import {examp, whereYou} from "../../actions/actions";
 import {onActive} from "../../functions/onActive";
+import {regexLiteralAbout, PAGE_CASESE_NAME} from '../../Constants/Сonstants';
 import './header.scss';
 
 
 function Header() {
-    const regexLiteralAbout = /\/about\/?/g;
     let youAreHere = useSelector(state => state.menu.youAreHere);
     let history = useHistory();
     const menuElements = useSelector(state => state.menu.elements);
@@ -37,13 +37,13 @@ function Header() {
                                         {element.title}
                                     </Link>
                                         {
-                                            element.path === '/about' && history.location.pathname.search(regexLiteralAbout) >= 0 && (
+                                            element.path === `/${PAGE_CASESE_NAME}` && history.location.pathname.search(regexLiteralAbout) >= 0 && (
                                                 <ul className={"nav-menu__sub-list"}>
                                                     {menuProjectsElements.map((project, i) => {
                                                         return (
                                                             <li className={"nav-menu__sub-item"} key={i}>
                                                                 <Link
-                                                                    to={`/about/${project.path}`}
+                                                                    to={`/${PAGE_CASESE_NAME}/${project.path}`}
                                                                     className={onActive(history.location.pathname, project.path) ? 'sub-active' : ''}
                                                                 >
                                                                     {project.name}
