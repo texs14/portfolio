@@ -25,7 +25,7 @@ const initialState = {
             description: 'Визитка страхового агента, реализована на WordPress. Страницы: Главная с информацией о "компанию", статьи о всяком страховом для СЕО продвижения, и калькулятор расчёта ОСАГО вставленный со стороннего сайта через iframe. Адаптирован под все размеры экранов.',
             images: [
                 'https://sun9-1.userapi.com/impg/N4F3EB5MUgHn5f6nKo12AsRQt9gSZ9SHXdj1DQ/GNbzWWofLoQ.jpg?size=1280x740&quality=96&sign=5e42ea19eaa3f0005710bef3f23d1576&type=album',
-                'https://sun9-36.userapi.com/impg/megZ-fwyowdlMzd7lgMIPj0dWPw1ZcDEguzLtQ/PtIQojPBzKY.jpg?size=1280x740&quality=96&sign=52f006f1ea612d87baccb72323d29071&type=album',
+                'https://sun9-24.userapi.com/impg/FKgnpgbdG7CcZ8FSselYmEqMaaPHM1UVM0L04g/kjyW-G0X5vI.jpg?size=1280x740&quality=96&sign=007fc73b89260357b6c2927f382e972e&type=album',
                 'https://sun9-6.userapi.com/impg/5RcCbqMRyZIlBNLCSnPeF3jnlvWFyN_5NAbz2g/QBOmmYsWKqg.jpg?size=1280x740&quality=96&sign=b9c268abdce4f00444e31f60408fc0b8&type=album',
                 'https://psv4.userapi.com/c520036/u132463526/docs/d46/b3dfe62bd82a/osago_nobile.png?extra=C43cPmidPhtyWe3kGNU1L-0yfo-hXgyjrOENwH-qqNYkVElKkMPPR5Wv_dmPyzjg9VbAwA3cMhDcX0Ku2kEBrGWxtLD2FH3x7gUanh8SRZMUGBNIYpOwHey2wyZHmE7FtqvpJgv3pPVD9fhFx3UJa3Tm-w',
             ]
