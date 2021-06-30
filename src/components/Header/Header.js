@@ -58,6 +58,10 @@ function Header() {
                         )
                     })}
                 </ul>
+                <ul className="social">
+                    <a href="https://github.com/texs14" target={'_blank'} className="social__link social__link_git"></a>
+                    <a href="https://hh.ru/resume/0f1ef1bcff08380fdb0039ed1f326946427750" target={'_blank'} className="social__link social__link_hh"></a>
+                </ul>
             </nav>
         </header>
 

@@ -31,6 +31,9 @@
 }
 
 .nav-menu {
+  display: flex;
+  flex-flow: column;
+  height: 50%;
   position: relative;
   top: -50%;
 
@@ -77,4 +80,27 @@
 
   }
 
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: auto;
+  margin-bottom: 60px;
+
+  &__link {
+    width: 40px;
+    height: 40px;
+
+    &_git {
+      //background: blue;
+      margin-right: 10px;
+      background: url(https://psv4.userapi.com/c536236/u132463526/docs/d34/8ca52f6f4c0d/github_PNG20.png?extra=x3imInPmQn-22IrMqiqKphAKA-Iy2vFPjO8ogpDBq3UeQTkIasGy4qeoII2LN6TK8gNWzL1C7wKdqvO6GFyK-Knq12UU0rPtt00rUEYmCRXRNz5S3azzyRtmVVUOpeJQ1BZcNfmoDr_tgU2HjTYhUSKWBQ) center / 100% content-box no-repeat;
+    }
+
+    &_hh {
+      background: url(https://cdn.admitad-connect.com/public/campaign/images/2021/2/17/15780-d95ee28d9d65e3b3.png) center / 258% content-box no-repeat;
+    }
+  }
 }
